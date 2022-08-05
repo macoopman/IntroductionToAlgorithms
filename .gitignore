@@ -46,6 +46,7 @@ x64/
 *.testlog
 *.v2
 *.manifest
+*.vs
 
 # Visual C++ cache files
 ipch/
