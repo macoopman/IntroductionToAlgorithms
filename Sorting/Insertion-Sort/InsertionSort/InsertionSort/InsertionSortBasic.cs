@@ -8,7 +8,7 @@ namespace InsertionSort
 {
     public class InsertionSortBasic
     {
-        public void Sort(ref int[] sortMe)
+        public void SortNonDecreasing(ref int[] sortMe)
         {
             for(var j = 1; j <= sortMe.Length - 1; j++)
             {
@@ -21,6 +21,22 @@ namespace InsertionSort
                     i--;
                 }
                 sortMe[i+ 1] = key;
+            }
+        }
+
+        public void SortNonIncreasing(ref int[] b)
+        {
+            for (int i = 1; i < b.Length; i++)
+            {
+                var key = b[i];
+                var j = i - 1;
+                
+                while (j >= 0 && b[j] < key)
+                {
+                    b[j+1] = b[j];
+                    j--;
+                }
+                b[j+1] = key;
             }
         }
     }
